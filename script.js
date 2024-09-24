@@ -7,8 +7,17 @@
 
     const currentDonation = document.getElementById('noakhali-donate').innerText
 
-    if(!isNaN(noakhaliInputAmount) && typeof noakhaliInputAmount !== 'number'){         
+    // condition added
 
+    if(isNaN(noakhaliInputAmount) || noakhaliInputAmount <= 0){         
+        alert('Invalid Amount. Please enter a valid amount.');
+    }
+
+    else if(noakhaliInputAmount > balance){  
+        alert('Insufficient balance. Please enter a smaller amount.')
+    }
+
+    else{  
         const newBalance = updateNoakhaliBalance(balance, noakhaliInputAmount)
 
         document.getElementById('my-balance').innerText = newBalance 
@@ -19,10 +28,6 @@
 
         const noakhaliUpdatedDonationAmount = parseInt(currentDonation) + parseInt(noakhaliInputAmount);
         document.getElementById('noakhali-donate').innerText = noakhaliUpdatedDonationAmount;
-         
-    }
-    else{  
-        alert('Invalid Amount enter a Valid Amount')
     } 
 
 })
@@ -35,11 +40,22 @@
 
     const balance = document.getElementById('my-balance').innerText 
 
-    const currentDonation = document.getElementById('feni-donate').innerText
+    const currentDonation = document.getElementById('feni-donate').innerText    
+        
+    // Condations added
 
-    if(!isNaN(feniInputAmount) && typeof feniInputAmount !== 'number'){         
+    if (isNaN(feniInputAmount) || feniInputAmount <= 0) {
+        alert('Invalid Amount. Please enter a valid amount.');
+    }   
 
-        const newBalance = updateBalance(balance, feniInputAmount)
+    else if (feniInputAmount > balance) {
+        alert('Insufficient balance. Please enter a smaller amount.');
+    }   
+
+    else{  
+
+
+        const newBalance = updateFeniBalance(balance, feniInputAmount)
 
         document.getElementById('my-balance').innerText = newBalance 
 
@@ -50,16 +66,12 @@
         const feniUpdatedDonationAmount = parseInt(currentDonation) + parseInt(feniInputAmount);
         document.getElementById('feni-donate').innerText = feniUpdatedDonationAmount;
          
-    }
-    else{  
-        alert('Invalid Amount enter a Valid Amount')
     } 
 
 })  
 
 // Protest Donation Function
 
-// Feni Donate Function
 
 document.getElementById('protest-donate-btn').addEventListener('click', function(){    
 
@@ -69,7 +81,19 @@ document.getElementById('protest-donate-btn').addEventListener('click', function
 
     const currentDonation = document.getElementById('protest-donate').innerText
 
-    if(!isNaN(protestInputAmount) && typeof protestInputAmount !== 'number'){         
+
+    // conditions
+
+    if (isNaN(protestInputAmount) || protestInputAmount <= 0) {
+        alert('Invalid Amount. Please enter a valid amount.');
+    }       
+
+    else if (protestInputAmount > balance) {
+        alert('Insufficient balance. Please enter a smaller amount.');
+    }
+
+
+    else{  
 
         const newBalance = updateProtestBalance(balance, protestInputAmount)
 
@@ -81,10 +105,6 @@ document.getElementById('protest-donate-btn').addEventListener('click', function
 
         const protestUpdatedDonationAmount = parseInt(currentDonation) + parseInt(protestInputAmount);
         document.getElementById('protest-donate').innerText = protestUpdatedDonationAmount;
-         
-    }
-    else{  
-        alert('Invalid Amount enter a Valid Amount')
     } 
 
 })  
