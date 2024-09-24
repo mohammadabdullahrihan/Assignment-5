@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="scroll-smooth w-full h-full p-0 m-0 " lang="en">
+<html class="scroll-smooth w-full h-full p-0 m-0 overflow-x-hidden " lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,10 +18,11 @@
     />
     <title>Donation Bangladesh</title>
   </head>
-  <body class="font-['Lexend']"> 
+  <body class="font-['Lexend'] scroll-smooth w-full h-full p-0 m-0 overflow-x-hidden "> 
 
 
     <!-- Header Section added -->
+
 
     <header class="bg-gray-200 fixed backdrop-blur-2xl bg-opacity-40  w-full ">
       <!-- Navigation Bar -->
@@ -42,18 +43,18 @@
 
         <!-- Logo -->
 
-        <div class="flex">
+        <div class="flex lg:flex">
 
           <!-- image -->
 
           <div>
-            <img src="assets/logo.png" alt="Logo" class="" />
+            <img src="assets/logo.png" alt="Logo" class="hidden lg:block lg:w-10" />
           </div>
 
           <!-- Text -->
 
           <div>
-            <h2 class="text-xl font-bold p-4">Donate Bangladesh</h2>
+            <h2 class="text-xl font-bold lg:p-3 pl-9">Donate Bangladesh</h2>
           </div>
         </div>
 
@@ -65,7 +66,7 @@
 
 
           <div>
-            <img src="assets/coin.png" alt="Coin image" class="w-8" />
+            <img src="assets/coin.png" alt="Coin image" class="hidden lg:w-8 lg:block" />
           </div>
 
           <!-- Amount --> 
@@ -114,7 +115,7 @@
       <section id="donate-card" class="pt-[250px]">
       <!-- Card 1 -->   
 
-       <div class="flex justify-center mx-10 my-5  p-1 border rounded-xl">
+       <div class="lg:flex justify-center lg:mx-10 lg:my-5 m-10 p-1 border rounded-xl grid grid-cols-1 lg:grid-flow-col ">
             <div class="lg:w-full">
                 <div class="bg-[#F9F7F3] p-4">
         <!-- image -->
@@ -161,11 +162,11 @@
 
                 <!-- donate Input -->    
 
-                <input id="noakhali-donate-input" class="p-3 pr-40 my-3 border border-gray-400 rounded-lg" type="text" name="text" id="" placeholder="Write Donation Amount">   
+                <input id="noakhali-donate-input" class="p-3 pr-[100px] lg:pr-40 my-3 border border-gray-400 rounded-lg" type="text" name="text" id="" placeholder="Write Donation Amount">   
 
                 <!-- Donate Button -->   
                 <button id="noakhali-donate-btn"
-                class="text-[17px] font-medium bg-[#B4F461] border rounded-lg px-[140px] py-3"
+                class="text-[17px] font-medium bg-[#B4F461] border rounded-lg lg:px-[140px] px-28 py-3"
                 >
                 Donation
                 </button>
@@ -175,8 +176,8 @@
 
             <div id="model-div" class="backdrop-blur-sm flex justify-center hidden "> 
               <!-- Static Model --> 
-               <div id="model" class=" flex justify-center mt-[50px] -ml-[1000px] absolute">  
-                <div class="w-[500px] h-[300px] bg-white text-center rounded-2xl space-y-5 border drop-shadow-2xl"> 
+               <div id="model" class=" flex justify-center lg:mt-[50px] -mt-[400px] lg:-ml-[1000px] absolute">  
+                <div class="lg:w-[500px] lg:h-[300px] bg-white text-center rounded-2xl space-y-3 lg:space-y-5 border drop-shadow-2xl px-5"> 
         
                   <!-- heading -->
         
@@ -184,7 +185,7 @@
         
                   <!-- coin --> 
         
-                  <img class="w-10 ml-[230px] " src="assets/coin.png" alt="">    
+                  <img class="w-10 ml-[110px] lg:ml-[230px] " src="assets/coin.png" alt="">    
         
                   <!-- description -->
         
@@ -201,9 +202,10 @@
 
         </div>  
 
-        <!-- Card 2 -->     
+        <!-- Card 2 -->       
+          
 
-        <div class="flex justify-center mx-10 my-5  p-1 border rounded-xl static">
+        <div class="lg:flex justify-center lg:mx-10 lg:my-5 m-10 p-1 border rounded-xl grid grid-cols-1 lg:grid-flow-col">
           <div class="lg:w-full">
               <div class="bg-[#F9F7F3] p-4">
       <!-- image -->
@@ -250,11 +252,11 @@
 
               <!-- donate Input -->    
 
-              <input id="feni-donate-input" class="p-3 pr-40 my-3 border border-gray-400 rounded-lg" type="text" name="text" id="" placeholder="Write Donation Amount">   
+              <input id="feni-donate-input" class="p-3 pr-[100px] lg:pr-40 my-3 border border-gray-400 rounded-lg" type="text" name="text" id="" placeholder="Write Donation Amount">   
 
               <!-- Donate Button -->   
               <button id="feni-donate-btn"
-              class="text-[17px] font-medium bg-[#B4F461] border rounded-lg px-[140px] py-3"
+              class="text-[17px] font-medium bg-[#B4F461] border rounded-lg lg:px-[140px] px-28 py-3"
               >
               Donation
               </button>
@@ -264,8 +266,9 @@
 
           <div id="model-div2" class="backdrop-blur-sm flex justify-center hidden "> 
             <!-- Static Model --> 
-             <div id="model" class=" flex justify-center m-[50px] -ml-[950px] relative">  
-              <div class="w-[500px] h-[300px] bg-white text-center rounded-2xl space-y-5 border drop-shadow-2xl"> 
+             <div id="model" class="  flex justify-center lg:mt-[50px] -mt-[400px] lg:-ml-[1000px] absolute"> 
+
+              <div class="lg:w-[500px] lg:h-[300px] bg-white text-center rounded-2xl space-y-3 lg:space-y-5 border drop-shadow-2xl px-5"> 
       
                 <!-- heading -->
       
@@ -273,7 +276,7 @@
       
                 <!-- coin --> 
       
-                <img class="w-10 ml-[230px] " src="assets/coin.png" alt="">    
+                <img class="w-10 ml-[110px] lg:ml-[230px] " src="assets/coin.png" alt="">    
       
                 <!-- description -->
       
@@ -293,7 +296,7 @@
        
         <!-- Card 3 --> 
 
-        <div class="flex justify-center mx-10 my-5  p-1 border rounded-xl">
+        <div class="lg:flex justify-center lg:mx-10 lg:my-5 m-10 p-1 border rounded-xl grid grid-cols-1 lg:grid-flow-col">
             <div class="lg:w-full">
                 <div class="bg-[#F9F7F3] p-4">
                   
@@ -339,11 +342,11 @@
 
                 <!-- donate Input -->    
 
-                <input class="p-3 pr-40 my-3 border border-gray-400 rounded-lg" type="text" name="text" id="protest-donate-input" placeholder="Write Donation Amount">   
+                <input class="p-3 pr-[100px] lg:pr-40 my-3 border border-gray-400 rounded-lg" type="text" name="text" id="protest-donate-input" placeholder="Write Donation Amount">   
 
                 <!-- Donate Button -->   
                 <button id="protest-donate-btn"
-                class="text-[17px] font-medium bg-[#B4F461] border rounded-lg px-[140px] py-3"
+                class="text-[17px] font-medium bg-[#B4F461] border rounded-lg lg:px-[140px] px-28 py-3"
                 >
                 Donation
                 </button>
@@ -353,8 +356,8 @@
 
             <div id="model-div3" class="backdrop-blur-sm flex justify-center hidden "> 
               <!-- Static Model --> 
-               <div id="model" class=" flex justify-center mt-[50px] -ml-[1000px] absolute">  
-                <div class="w-[500px] h-[300px] bg-white text-center rounded-2xl space-y-5 border drop-shadow-2xl"> 
+               <div id="model" class="  flex justify-center lg:mt-[50px] -mt-[400px] lg:-ml-[1000px] absolute">  
+                <div class="lg:w-[500px] lg:h-[300px] bg-white text-center rounded-2xl space-y-3 lg:space-y-5 border drop-shadow-2xl px-5"> 
         
                   <!-- heading -->
         
@@ -362,7 +365,7 @@
         
                   <!-- coin --> 
         
-                  <img class="w-10 ml-[230px] " src="assets/coin.png" alt="">    
+                  <img class="w-10 ml-[110px] lg:ml-[230px]" src="assets/coin.png" alt="">    
         
                   <!-- description -->
         
