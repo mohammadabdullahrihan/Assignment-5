@@ -10,6 +10,8 @@
     const balance = document.getElementById('my-balance').innerText 
 
     const currentDonation = document.getElementById('noakhali-donate').innerText    
+
+    const model = document.getElementById('my-dialog')
         
     // condition added
 
@@ -55,7 +57,15 @@
         
         document.getElementById('history-section').appendChild(historyDiv)
 
-}
+        // Model function 
+
+        document.getElementById('model-div').classList.remove('hidden')
+
+        document.getElementById('close-btn').addEventListener('click', function(){  
+            document.getElementById('model-div').classList.add('hidden')
+        })
+        }
+    })
 
     // Feni Donate Function
 
@@ -109,7 +119,15 @@
               <p class="text-lg font-light text-gray-500 pl-7"> ${new Date().toString()}
         `
     
-        document.getElementById('history-section').appendChild(historyDiv)
+        document.getElementById('history-section').appendChild(historyDiv)  
+            
+        // Model function
+
+        document.getElementById('model-div2').classList.remove('hidden')
+
+        document.getElementById('close-btn2').addEventListener('click', function(){  
+            document.getElementById('model-div2').classList.add('hidden')
+        })
          
     } 
 
@@ -170,6 +188,14 @@ document.getElementById('protest-donate-btn').addEventListener('click', function
         `
     
         document.getElementById('history-section').appendChild(historyDiv)
+
+        // Model function
+
+        document.getElementById('model-div3').classList.remove('hidden')
+
+        document.getElementById('close-btn3').addEventListener('click', function(){  
+            document.getElementById('model-div3').classList.add('hidden')
+        })
     } 
 
 })          
@@ -183,6 +209,8 @@ const donateTab = document.getElementById('donate-btn')
 
 // Buttons functions
 
+
+    // History Button
 historyTab.addEventListener('click', function() {     
     document.getElementById('donate-card').classList.add( "hidden",)    
     
@@ -216,6 +244,8 @@ historyTab.addEventListener('click', function() {
 })
 
 
+    // Donate Button
+
 donateTab.addEventListener('click', function(){ 
     document.getElementById('donate-card').classList.remove('hidden')       
 
@@ -245,4 +275,3 @@ donateTab.addEventListener('click', function(){
     
 })
 
-    })
