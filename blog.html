@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth w-full h-full p-0 m-0 overflow-x-hidden">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">      
@@ -18,52 +18,75 @@
 </head>
 <body class="font-['Lexend']">
     
-    <!-- Header Section added -->
+    <!-- Header Section start -->
 
     <header>
-        <!-- Navigation Ba -->
-        <div class=" bg-[#F9F7F3] flex justify-around p-5">
+
+        <!-- Navigation Bar -->
+        <div class=" bg-[#caf6c2] flex sticky backdrop-blur-sm bg-opacity-80 justify-around p-5">
+
           <!-- Button -->
+  
+  
           <div>
             <button id="blog"
               class="text-xl font-medium bg-[#B4F461] border rounded-lg px-9 py-2"
             >
-              Home
+              blog
             </button>
           </div>
   
           <!-- Logo -->
-          <div class="flex">
+  
+          <div class="flex lg:flex">
+  
             <!-- image -->
   
             <div>
-              <img src="assets/logo.png" alt="Logo" class="" />
+              <img src="assets/logo.png" alt="Logo" class="hidden lg:block lg:w-10" />
             </div>
   
             <!-- Text -->
   
             <div>
-              <h2 class="text-xl font-bold p-4">Donate Bangladesh</h2>
+              <h2 class="text-xl font-bold lg:p-3 pl-9 text-center">Donate Bangladesh</h2>
             </div>
           </div>
   
-          <!-- Amount Balance -->
+          <!-- Amount Balance start -->
+  
           <div class="flex">
+  
             <!-- image -->
   
+  
             <div>
-              <img src="assets/coin.png" alt="Coin image" class="w-8" />
+              <img src="assets/coin.png" alt="Coin image" class="hidden lg:w-8 lg:block" />
             </div>
   
-            <!-- Amount -->
+            <!-- Amount --> 
   
-            <div>
-              <h3 class="text-xl font-semibold p-1">5000 BDT</h3>
+            <!-- Digit -->
+  
+            <div> 
+              <h2 id="my-balance" class="text-xl font-semibold p-1">5000</h2>
+            </div>
+  
+            <!-- Currency -->
+  
+            <div> 
+              
+              <h3 id="" class="text-xl font-semibold p-1"> BDT</h3>
             </div>
           </div>
+  
+           <!-- Amount Balance end -->
+  
         </div>
    
-      </header> 
+      </header>   
+
+      <!-- header section end -->
 
       <!-- Main Section Added -->   
 
@@ -76,7 +99,12 @@
 
           <div class="border rounded-xl border-gray-300 p-5 m-5 space-y-2"> 
             <h2 class="text-2xl font-medium">A.What is the Document Object Model (DOM)?</h2> 
-            <p class="text-xl"></p>
+
+           <!-- answer -->
+             
+           <p> 
+            <span class="text-xl font-medium">Answer :</span>
+
               The Document Object Model (DOM) is a programming interface for HTML and XML documents. It defines a tree-like structure of objects that represent the document's structure and content. The DOM provides methods and properties to access and manipulate the document's elements, attributes, and text.
             </p>
           </div>  
@@ -85,7 +113,11 @@
 
           <div class="border rounded-xl border-gray-300 p-5 m-5 space-y-2"> 
             <h2 class="text-2xl font-medium">B.How do you select an element from the DOM?</h2> 
-            <p class="text-xl"></p>
+
+            <!-- answer -->
+             
+            <p> 
+              <span class="text-xl font-medium">Answer :</span>
 
             To select an element from the DOM, you can use the following methods:
             <ul>
@@ -100,7 +132,12 @@
 
           <div class="border rounded-xl border-gray-300 p-5 m-5 space-y-2"> 
             <h2 class="text-2xl font-medium">C.What is event delegation in the context of the DOM, and why is it useful?</h2> 
-            <p class="text-xl"></p>
+
+            <!-- answer -->
+             
+            <p> 
+              <span class="text-xl font-medium">Answer :</span>
+
               Event delegation is a technique in JavaScript that allows you to attach event listeners to a parent element instead of individual child elements. This reduces the number of event listeners and improves performance by avoiding unnecessary event handling.
             </p>
           </div>  
@@ -109,8 +146,13 @@
 
           <div class="border rounded-xl border-gray-300 p-5 m-5 space-y-2"> 
             <h2 class="text-2xl font-medium">D.How do you manipulate an element's attributes and styles using the DOM?
-            </h2> 
-            <p class="text-xl"></p> 
+            </h2>   
+
+            <!-- answer -->
+
+            <p> 
+              <span class="text-xl font-medium">Answer :</span>
+
             To manipulate an element's attributes and styles using the DOM, you can use the following methods:
             <ul>
               <li>setAttribute(name, value): Adds or updates an attribute of the element</li>
