@@ -52,11 +52,10 @@
 
               <p class="text-lg font-light text-gray-500 pl-7"> ${new Date().toString()}
         `
-    
+        
         document.getElementById('history-section').appendChild(historyDiv)
-    } 
 
-})
+}
 
     // Feni Donate Function
 
@@ -90,7 +89,27 @@
         document.getElementById('feni-donate').innerText = feniInputAmount  
 
         const feniUpdatedDonationAmount = parseInt(currentDonation) + parseInt(feniInputAmount);
-        document.getElementById('feni-donate').innerText = feniUpdatedDonationAmount;
+        document.getElementById('feni-donate').innerText = feniUpdatedDonationAmount;   
+
+        // Transection History added
+        const historyDiv = document.createElement('div')
+        historyDiv.classList.add(
+                "bg-white", 
+                "py-7", 
+                "rounded-xl",   
+                "shadow",
+                "border",
+                "m-16",
+                "space-y-5"
+            )
+        historyDiv.innerHTML = `
+              <p class="text-xl font-bold pl-7">
+              ${feniInputAmount} Taka is Donate for Flood Relief in Feni,Bangladesh</p>
+
+              <p class="text-lg font-light text-gray-500 pl-7"> ${new Date().toString()}
+        `
+    
+        document.getElementById('history-section').appendChild(historyDiv)
          
     } 
 
@@ -131,6 +150,26 @@ document.getElementById('protest-donate-btn').addEventListener('click', function
 
         const protestUpdatedDonationAmount = parseInt(currentDonation) + parseInt(protestInputAmount);
         document.getElementById('protest-donate').innerText = protestUpdatedDonationAmount;
+
+        // Transection History added
+        const historyDiv = document.createElement('div')
+        historyDiv.classList.add(
+                "bg-white", 
+                "py-7", 
+                "rounded-xl",   
+                "shadow",
+                "border",
+                "m-16",
+                "space-y-5"
+            )
+        historyDiv.innerHTML = `
+              <p class="text-xl font-bold pl-7">
+              ${protestInputAmount} Taka is Donate for Injured in the Quota Movement</p>
+
+              <p class="text-lg font-light text-gray-500 pl-7"> ${new Date().toString()}
+        `
+    
+        document.getElementById('history-section').appendChild(historyDiv)
     } 
 
 })          
@@ -147,6 +186,7 @@ const donateTab = document.getElementById('donate-btn')
 historyTab.addEventListener('click', function() {     
     document.getElementById('donate-card').classList.add( "hidden",)    
     
+    document.getElementById('history-section').classList.remove('hidden')
 
     historyTab.classList.add(
         "text-xl",
@@ -173,12 +213,13 @@ historyTab.addEventListener('click', function() {
     )           
 
     document.getElementById('history-card').classList.remove('hidden')
-   
 })
 
 
 donateTab.addEventListener('click', function(){ 
     document.getElementById('donate-card').classList.remove('hidden')       
+
+    document.getElementById('history-section').classList.add('hidden')
 
     historyTab.classList.remove(
         "bg-[#B4F461]"
@@ -201,6 +242,7 @@ donateTab.addEventListener('click', function(){
         "border",
         "border-gray-400",
     )       
-   
+    
 })
 
+    })
