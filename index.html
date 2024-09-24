@@ -26,7 +26,7 @@
       <div class=" bg-[#caf6c2] flex sticky backdrop-blur-sm bg-opacity-80 justify-around p-5">
         <!-- Button -->
         <div>
-          <button
+          <button id="home"
             class="text-xl font-medium bg-[#B4F461] border rounded-lg px-9 py-2"
           >
             blog
@@ -77,12 +77,12 @@
 
       <div class="flex justify-center py-12">
         <div>
-          <button
+          <button id="donate-btn"
             class="text-xl font-semibold bg-[#B4F461] border rounded-lg px-9 py-3"
           >
             Donation
           </button>
-          <button
+          <button id="history-btn"
             class="text-xl text-gray-600 font-medium border rounded-lg border-gray-400 px-7 py-3 ml-1"
           >
             History
@@ -92,10 +92,11 @@
     </header>
 
     <!-- main section added -->
-    <main class="pt-[200px]">  
+    <main id="donate-section">  
 
       <!-- Card Section added -->   
         
+      <section id="donate-card" class="pt-[250px]">
       <!-- Card 1 -->   
 
        <div class="flex justify-center mx-10 my-5  p-1 border rounded-xl">
@@ -271,17 +272,45 @@
                 Donation
                 </button>
             </div>
-        </div>      
+        </div>        
 
-        <div> 
+        </section>  
+
+
+
+        <section id="history-section" class="pt-[200px]"> 
+           <!-- History Section -->
+        <div id="history-card" class="space-y-4 p-5 hidden ">
+          <!-- Donation Cards -->
+    
+             
+          </div>
+
+
+        </section>
+
+        <div id="model-div" class=" hidden backdrop-blur-sm flex justify-center"> 
           <!-- Static Model --> 
-           <div id="model" class="hidden">  
-            <div class="w-[600px] h-[400px] bg-yellow-200 text-center">
-              <h1>Congrates!</h1> 
-              <img src="assets/coin.png" alt="">  
-              <h2>Thank you for your donation.</h2>
-              <h2>Succesfully</h2>  
-              <button>Close confirmation</button>
+           <div id="model" class=" flex justify-center sticky m-[500px]">  
+            <div class="w-[500px] h-[300px] bg-white text-center rounded-2xl space-y-5 border drop-shadow-2xl"> 
+
+              <!-- heading -->
+
+              <h1 class="text-3xl font-semibold pt-6">Congrates!</h1> 
+
+              <!-- coin --> 
+
+              <img class="w-10 ml-[230px] " src="assets/coin.png" alt="">    
+
+              <!-- description -->
+
+              <h2 class="text-gray-500  ">You Have Donated For Humankind</h2>
+
+              <h2 class="text-lg font-bold">Succesfully</h2>    
+
+              <!-- close button -->
+
+              <button id="close-btn" class="bg-gray-100 px-5 py-3 rounded-lg">Close confirmation</button>
             </div>
            </div>
         </div>  
@@ -293,5 +322,4 @@
     <!-- JavaScript file added -->  
      <script src="script.js"></script>  
      <script src="utility.js"></script>
-  </body>
 </html>
